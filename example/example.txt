@@ -1,0 +1,270 @@
+#This comment is not visible
+
+c:9
+h1u:TextSpecial
+p:TextSpecial is a class for parsing a proprietary but simple markup language that can handle multiple columns. No CSS framework was used, for simple fast and convenient use.
+
+p:This page was created with the TextSpecial class. This <a href="example.txt" target="_blank">markup text</a> was used.
+
+c:9
+h2u:Colums
+p:A column is defined with <quote>c:</quote> followed by a number that specifies over how many cells a column should be extended. There are 9 cells possible per row. After that, there is an automatic break to the next line. Everything that follows the line with the column definition is displayed scaled to the selected width.
+
+c:1|m
+p:Column 1 <quote>c:1</quote>
+c:1|m
+p:Column 2 <quote>c:1</quote>
+c:1|m
+p:Column 3 <quote>c:1</quote>
+c:1|m
+p:Column 4 <quote>c:1</quote>
+c:1|m
+p:Column 5 <quote>c:1</quote>
+c:1|m
+p:Column 6 <quote>c:1</quote>
+c:1|m
+p:Column 7 <quote>c:1</quote>
+c:1|m
+p:Column 8 <quote>c:1</quote>
+c:1|m
+p:Column 9 <quote>c:1</quote>
+
+c:2|m
+p:Column 1 und 2 <quote>c:2</quote>
+c:2|m
+p:Column 3 und 4 <quote>c:2</quote>
+c:2|m
+p:Column 5 und 6 <quote>c:2</quote>
+c:2|m
+p:Column 7 und 8 <quote>c:2</quote>
+c:1|m
+p:Column 9 <quote>c:1</quote>
+
+c:1|c
+p:Column 1 <quote>c:1</quote>
+c:3|c
+p:Columnn 2, 3 und 4 <quote>c:3</quote>
+c:1|c
+p:Column 5 <quote>c:1</quote>
+c:4|c
+p:Columnn 6, 7, 8 und 9 <quote>c:4</quote>
+
+c:9|c
+p:Columnn 1, 2, 3, 4, 5, 6, 7, 8 und 9 <quote>c:9</quote>
+
+
+c:6
+h2u:Index
+p:With <quote>index:</quote> a table of contents is displayed which lists all h2 titles. If specified, it is possible to jump directly to the respective element and back.
+index:
+
+c:3
+h2u:Reading time
+p:The estimated reading time can be displayed with <quote>readingtime:</quote>.
+readingtime:
+
+
+c:9
+h2u:Titles
+
+c:3
+p:following titles are possible:
+
+c:6
+h1:Title first level (h1)
+  pp2:<quote>h1:...</quote>
+h2:Title second level (h2)
+  pp2:<quote>h2:...</quote>
+h3:Title third level (h3)
+  pp2:<quote>h3:...</quote>
+h4:title fourth level (h4)
+  pp2:<quote>h4:...</quote>
+
+h1u:Title first level underlined (h1)
+  pp2:<quote>h1u:...</quote>
+h2u:Title second level underlined (h2)
+  pp2:<quote>h2u:...</quote>
+h3u:Title third level underlined (h3)
+  pp2:<quote>h3u:...</quote>
+h4u:Title fourth level underlined (h4)
+  pp2:<quote>h4u:...</quote>
+
+c:9
+h2u:Alignment
+p:The alignment can also be determined:
+
+c:3
+p:left-justified <quote>c:3</quote>
+c:3|c
+p:centered <quote>c:3|c</quote>
+c:3|r
+p:right-justified <quote>c:3|r</quote>
+
+c:3
+h2u:Text
+cap:This paragraph starts with a capital letter. The line must start with the <quote>cap:...</quote> label.
+
+p:This paragraph starts normally. The line must start with the <quote>p:...</quote> tag.
+
+p:Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.
+
+h2u:Image
+p:Images are automatically centered and scaled to the available column width. A title can be specified. The following image is displayed with <quote>i:testbild.jpg|This is a butterfly</quote>:
+i:test_image.jpg|This is a butterfly
+
+c:4
+h2u:Lists
+pl1:List A 
+pp1:indented
+  pl2:List AA
+  pp2:indented
+  pl2:List AB
+  pp2:indented
+  pl2:List AC
+  pp2:indented
+pl1:List B
+  pl2:List BA
+    pl3:List BAA
+    pl3:List BAB
+      pl4:List BABA
+      pl4:List BABB
+      pl4:List BABC
+    pl3:List BAC
+  pl2:List BB
+  pl2:List BC
+pl1:List C
+  pn2:numbered CA
+  pn2:numbered CB
+  pn2:numbered CC
+
+c:2
+h2u:Clock
+p:Clock with random setting
+p:<quote>clock:</quote>
+clock:
+p:Uhr, set to 09:30
+p:<quote>clock:09:30:00</quote>
+clock:09:30:00
+
+h2u:Star
+p:randomly generated SVG-Star
+p:<quote>star:</quote>
+star:
+
+c:4
+h2u:Quotes
+p:a single line quote <quote>q:...</quote> oder <quote>z:...</quote>:
+q:this is a quote.
+z:that's another quote.
+
+p:multiline quote is placed between <quote>qs:</quote> and <quote>qe:</quote>:
+qs:
+This is a multiline quote.
+Line breaks are possible.
+#also with comment characters
+  with indentations
+also with special characters \/ " '
+qe:
+
+c:5
+h2u:Code
+p:one line of code <quote>src:...</quote>
+src:this is a single line source code
+
+p:several lines of code are placed between <quote>srcs:</quote> and <quote>srce:</quote>:
+srcs:
+#This is a multiline source text with indentation
+for {$i=0;$i++;$i++} {
+  print(pow($i,2)."<br>");
+}
+srce:
+
+
+c:9
+h2u:Tables
+
+p:Tables also work. Note: the regular markup syntax is used. The following text must be placed between <quote>tables:</quote> and <quote>tablee:</quote>.
+
+srcs:
+Name   | centered         | Spicy     | right-justified
+-------|:----------------:|----------|---------:
+Joan   | saag paneer      | medium   | $11
+Sally  | vindaloo         | mild     | $14
+Erin   | lamb madras      | HOT      | $5
+srce:
+
+p:The following table is generated from this:
+
+tables:
+Name   | centered         | Spicy     | right-justified
+-------|:----------------:|----------|---------:
+Joan   | saag paneer      | medium   | $11
+Sally  | vindaloo         | mild     | $14
+Erin   | lamb madras      | HOT      | $5
+tablee:
+
+
+c:9
+h2u:Markins
+
+c:6
++i:test_image.png|marked image
+
+c:3
++h3:marked title
++p:If a <quote>+</quote> is specified for the element, the element is output marked.
+
+
+c:9
+h2u:Comments
+p:If a line starts with a <quote>#</quote>, the content is commented out and not displayed.
+
+
+c:9
+h2u:Videos
+
+p:Here is one from Youtube <quote>youtube:RgKAFK5djSk</quote>:
+youtube:RgKAFK5djSk
+
+p:and here one from Vimeo <quote>vimeo:22439234</quote>:
+vimeo:22439234
+
+
+c:9
+h2u:HTML
+
+p:Native HTML elements can also be included, with CSS and Javascript if desired. The HTML blocks must be placed between <quote>htmls:</quote> and <quote>htmle:</quote>. Here is a simple CSS3 based spinner:
+
+htmls:
+<style>
+#myspinner {
+  display: inline-block;
+  width: 50px;
+  height: 50px;
+  border: 3px solid #ff0000;
+  border-radius: 50%;
+  border-top-color: #fff;
+  animation: spin 1s ease-in-out infinite;
+  -webkit-animation: spin 1s ease-in-out infinite;
+}
+@keyframes spin { to { -webkit-transform: rotate(360deg); } }
+@-webkit-keyframes spin { to { -webkit-transform: rotate(360deg); } }
+</style>
+<div id="myspinner"></div>
+htmle:
+
+c:9
+h2u:Other
+
+p:Texts can also be formatted with rudimentary BBCodes and other markup codes:
+srcs:
+''Text'' = bold
+'''Text''' = italic
+''''Text'''' = bold and italic
+[center]...[/center] = centered
+[right]...[/right] = right-justified
+[red]...[/red] = red
+[orange]...[/orange] = orange
+[green]...[/green] = green
+[gray]...[/gray] = gray
+srce:
